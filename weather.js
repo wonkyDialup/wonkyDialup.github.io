@@ -12,9 +12,9 @@ async function searchWeather() {
     const weatherDiv = document.createElement("div");
     weatherDiv.className = "weather";
     const temperature =document.createElement("h2");
-    temperature.innerHTML = `It is currently ${jsonWeather.main.temp} °F in ${search}`;
+    temperature.innerHTML = `It is currently ${jsonWeather.main.temp.toFixed(0)} °F in ${search}`;
     const feelsLike = document.createElement("h2");
-    feelsLike.innerHTML = `Feels like: ${jsonWeather.main.feels_like} °F`;
+    feelsLike.innerHTML = `Feels like: ${jsonWeather.main.feels_like.toFixed(0)} °F`;
     console.table(jsonWeather.main);
     mainContainer.append(weatherDiv)
     weatherDiv.append(temperature, feelsLike);
